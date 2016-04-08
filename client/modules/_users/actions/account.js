@@ -1,5 +1,7 @@
 // import {Accounts} from 'meteor/meteor';
 import axios from 'axios';
+import cors from 'cors';
+
 
 export default {
 
@@ -18,8 +20,7 @@ export default {
     //   FlowRouter.go('/account');
     // });
 
-    var apikey = 'toWQyQh1GMfjIQLx7dqc';
-    axios.get(`http://member.penjajahfb.com/api/check-access/by-login-pass?_key=${apikey}&login=${username}&pass=${password}`)
+    axios.get(`http://localhost:8000/api/${username}/${password}`)
       .then((amemberauth) => (console.log(amemberauth.data.ok)))
   },
 
