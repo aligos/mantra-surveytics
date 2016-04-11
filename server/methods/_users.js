@@ -5,6 +5,7 @@ import {check} from 'meteor/check';
 export default function () {
   Meteor.methods({
 
+
     '_users.add'(data) {
 
       check(data, {
